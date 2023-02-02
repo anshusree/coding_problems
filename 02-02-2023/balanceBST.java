@@ -7,16 +7,16 @@ class Solution {
         inorder(root.right);
         return root;
     }
-    public TreeNode buildBST(int l, int r){
+    public TreeNode buildBST(TreeNode root, int l, int r){
         if(l>r) return null;
         int mid = (l+r)/2;
-        TreeNode root = list.get(mid);
-        root.left = buildBST(l, mid-1);
-        root.right = buildBST(mid+1, r);
+        root = list.get(mid);
+        root.left = buildBST(root.left, l, mid-1);
+        root.right = buildBST(root.right, mid+1, r);
         return root;
     }
     public TreeNode balanceBST(TreeNode root) {
         inorder(root);
-        return buildBST(0,list.size()-1);
+        return buildBST(root, 0, list.size()-1);
     }
 }
