@@ -10,6 +10,7 @@ class Solution {
             int size = queue.size();
             for(int i=1; i<=size; i++){
                 int node = queue.poll();
+                res.add(node);
                 for(int neigh:adj.get(node)){
                     if(!visited[neigh]){
                         visited[neigh] = true;
