@@ -12,7 +12,8 @@ class Solution
         int[] res = new int[V];
         int i=0;
         while(!stack.isEmpty()){
-            res[i++]=stack.peek();
+            int node = stack.peek();
+            res[i++] = node;
             stack.pop();
         }
         return res;
