@@ -1,5 +1,4 @@
 class Solution {
-    // Function to detect cycle in an undirected graph.
     public boolean isCycle(int V, ArrayList<ArrayList<Integer>> adj) {
         int[] visited = new int[V];
         for(int i=0; i<V; i++){
